@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+--red: hsl(0, 78%, 62%);
+--cyan: hsl(180, 62%, 55%);
+--orange: hsl(34, 97%, 64%);
+--blue: hsl(212, 86%, 64%);
+--very-dark-blue: hsl(234, 12%, 34%);
+--grayish-blue: hsl(229, 6%, 66%);
+--very-light-gray: hsl(0, 0%, 98%);
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-light-gray);
+    height: auto;
+    padding: 0rem 0rem 2rem 0rem;
+    margin: 0rem;
+}
+
+header{
+    width: 100%;
+    margin-top: 5rem;
+}
+
+header .top__title{
+    color: var(--grayish-blue);
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+    display: block;
+    padding: 0rem 1.5rem;
+}
+
+header h1{
+    color: var(--very-dark-blue);
+    padding: 0rem 0rem;
+    margin: 0.5rem 0rem;
+    text-align: center;
+}
+
+header p{
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1rem;
+    margin-bottom: 4rem ;
+    padding: 0rem 1rem;
+}
+
+header .top__description{
+    color: var(--grayish-blue);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+    padding: 0rem 1.5rem;
+}
+
+main section{
+    width: 100%;
+}
+
+main section.center__boxes{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+main .box{
+    background-color: #fff;
+    height: 17rem;
+    border-radius: 0.3rem;
+    padding: 2rem;
+    box-shadow: 0.5rem 1rem 0.5rem hsl(0deg 0% 0% / 3%);
+    color: var(--grayish-blue);
+    position: relative;
+}
+
+main .box h2{
+    margin: 0px;
+    color: var(--very-dark-blue);
+}
+
+main span.icon{
+    display: block;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+main .box.box__supervisor{
+    border-top: 0.2rem solid var(--cyan);
+}
+
+main .box.box__supervisor span.icon{
+    background: url(images/icon-supervisor.svg) no-repeat center center;
+}
+
+main .box.box__team_builder{
+    border-top: 0.2rem solid var(--red);
+}
+
+main .box.box__team_builder span.icon{
+    background: url(images/icon-team-builder.svg) no-repeat center center;
+}
+
+main .box.box__karma{
+    border-top: 0.2rem solid var(--orange);
+}
+
+main .box.box__karma span.icon{
+    background: url(images/icon-karma.svg) no-repeat center center;
+}
+
+main .box.box__calculator{
+    border-top: 0.2rem solid var(--blue);
+}
+
+main .box.box__calculator span.icon{
+    background: url(images/icon-calculator.svg) no-repeat center center;
+}   
+
+@media screen and (min-width: 768px){
+
+    main{
+        display: flex;
+        flex-direction: row;        
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header p{
+        text-align: center;
+        align-self: center;
+        width: 29.6rem;
+    }
+
+    main .box{
+        width: 90%;
+    }
+
+    main .left__boxes,
+    main .right__boxes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+    }
+    
+    main .left__boxes{
+        align-items: flex-end;
+    }
+
+    main .right__boxes{
+        align-items: flex-start;
+    }
+
+    main section.center__boxes{
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+
+    main{
+        gap: 0rem;
+    }
+
+    header p{
+        text-align: center;
+    }
+
+    main .box{
+        width: 21rem;
+    }
+    main section.center__boxes{
+        align-items: center;
+        width: auto;
+        margin: 0rem 1.5rem;
+    }
+}
+    
